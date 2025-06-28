@@ -1,0 +1,73 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-06-18 16:25:24.715862",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "",
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "label": "Article",
+   "mandatory": 0,
+   "options": "Article",
+   "wildcard_filter": 0
+  },
+  {
+   "default": "",
+   "fieldname": "Library Member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "mandatory": 0,
+   "options": "Library Member",
+   "wildcard_filter": 0
+  },
+  {
+   "default": "",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Status",
+   "mandatory": 0,
+   "options": "Issue\nReturn",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-06-18 19:29:35.954292",
+ "modified_by": "Administrator",
+ "module": "library_management",
+ "name": "Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n            L.article,\r\n            L.library_member,\r\n            L.type,\r\n            L.date,\r\n            M.from_date,\r\n            M.to_date\r\n        FROM\r\n            `tabLibrary Transaction` L\r\n        JOIN\r\n           `tabLibrary Membership` M\r\n        ON\r\n          L.library_member = M.library_member\r\n        WHERE\r\n            L.docstatus=1\r\n        ORDER BY L.date DESC",
+ "ref_doctype": "Library Transaction",
+ "report_name": "Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "tester"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Librarian"
+  },
+  {
+   "role": "Library Member"
+  }
+ ],
+ "timeout": 0
+}

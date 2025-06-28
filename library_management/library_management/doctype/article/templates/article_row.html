@@ -1,0 +1,33 @@
+<div class="doc-card" style="
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  gap: 16px;
+">
+<!-- Small Image -->
+  {% if doc.image %}
+    <a href="{{ doc.route }}">
+      <img
+        src="{{ doc.image }}"
+        alt="{{ doc.name }}"
+        style="width: 100px; height: auto; border-radius: 4px; object-fit: cover;"
+      >
+    </a>
+  {% endif %}
+
+<!-- Text Content -->
+  <div class="doc-info" style="flex: 1;">
+    <h2 style="margin: 0 0 6px; font-size: 1.25rem;">
+      <a href="{{ doc.route }}" style="text-decoration: none; color: #007bff;">
+        {{ doc.name }}
+      </a>
+    </h2>
+    {% if doc.author %}
+      <p style="margin: 0; font-size: 0.95rem; color: #555;">By <strong>{{ doc.author }}</strong></p>
+    {% endif %}
+  </div>
+</div>

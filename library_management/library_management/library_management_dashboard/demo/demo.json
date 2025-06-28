@@ -1,0 +1,25 @@
+{
+ "cards": [
+  {
+   "card": "demo"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "demo",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-06-26 10:31:24.975571",
+ "dashboard_name": "demo",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2025-06-26 10:41:11.863594",
+ "modified_by": "Administrator",
+ "module": "library_management",
+ "name": "demo",
+ "owner": "Administrator"
+}

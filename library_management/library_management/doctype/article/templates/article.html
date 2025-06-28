@@ -1,0 +1,57 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="article-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+
+  <!-- Featured Image -->
+  {% if image %}
+    <div class="article-image" style="text-align: center; margin-bottom: 20px;">
+      <img src="{{ image }}" alt="{{ title }}" style="max-width: 100%; height: auto; border-radius: 5px;">
+    </div>
+  {% endif %}
+
+  <!-- Title -->
+  <h1 class="article-title" style="font-size: 2.2rem; margin-bottom: 10px;">{{ title }}</h1>
+
+  <!-- Author -->
+  {% if author %}
+    <p class="article-author" style="color: #666; font-size: 0.95rem;">
+      <strong>By {{ author }}</strong>
+    </p>
+  {% endif %}
+
+  <!-- Status -->
+  {% if status %}
+    <p class="book-status" style="margin-top: 10px; font-weight: bold;">
+      Status:
+      {% if status == 'Available' %}
+        <span style="color: green;">Available</span>
+      {% elif status == 'Issued' %}
+        <span style="color: red;">Issued</span>
+      {% else %}
+        <span>{{ status }}</span>
+      {% endif %}
+    </p>
+  {% endif %}
+
+  <!-- Metadata -->
+  <div class="book-meta" style="margin: 15px 0; font-size: 1rem;">
+    {% if publisher %}
+      <p><strong>Publisher:</strong> {{ publisher }}</p>
+    {% endif %}
+    {% if isbn %}
+      <p><strong>ISBN:</strong> {{ isbn }}</p>
+    {% endif %}
+  </div>
+
+  <!-- Description -->
+  {% if description %}
+    <div class="article-description" style="margin-top: 20px; line-height: 1.6;">
+      {{ description }}
+    </div>
+  {% endif %}
+
+</div>
+
+
+{% endblock %}
