@@ -1,71 +1,73 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-06-26 17:04:28.013483",
+ "creation": "2025-07-01 11:28:56.137734",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "patient",
-  "doctor",
-  "column_break_iuem",
-  "appointment_date",
+  "task_name",
   "status",
-  "priority",
+  "column_break_szca",
+  "start_date",
+  "end_date",
+  "section_break_zqcc",
+  "description",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "patient",
+   "fieldname": "task_name",
    "fieldtype": "Data",
-   "label": "Patient",
-   "unique": 1
-  },
-  {
-   "fieldname": "doctor",
-   "fieldtype": "Data",
-   "label": "Doctor"
-  },
-  {
-   "fieldname": "column_break_iuem",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "appointment_date",
-   "fieldtype": "Date",
-   "label": "Appointment Date"
+   "label": "Task Name"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nUrgent\nScheduled\nCancelled",
-   "placeholder": "-----Select------"
+   "options": "\nOpen\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "column_break_szca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_zqcc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Appointment",
+   "options": "Project Task",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "priority",
-   "fieldtype": "Select",
-   "label": "priority",
-   "options": "\nLow\nMedium\nHigh"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-02 12:25:29.134648",
+ "modified": "2025-07-01 15:58:25.514152",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Appointment",
+ "name": "Project Task",
  "owner": "Administrator",
  "permissions": [
   {
@@ -84,6 +86,5 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
