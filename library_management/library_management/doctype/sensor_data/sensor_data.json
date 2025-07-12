@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-09 11:20:37.685648",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "value",
+  "timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "value",
+   "fieldtype": "Float",
+   "label": "value"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Timestamp\t"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-09 15:58:16.714486",
+ "modified_by": "Administrator",
+ "module": "library_management",
+ "name": "Sensor Data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

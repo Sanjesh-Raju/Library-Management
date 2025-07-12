@@ -7,6 +7,7 @@
  "field_order": [
   "patient",
   "doctor",
+  "child_table",
   "column_break_iuem",
   "appointment_date",
   "status",
@@ -56,13 +57,19 @@
    "fieldtype": "Select",
    "label": "priority",
    "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "child_table",
+   "fieldtype": "Table",
+   "label": "child table",
+   "options": "Appointment Child"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-02 12:25:29.134648",
+ "modified": "2025-07-02 17:18:23.676791",
  "modified_by": "Administrator",
  "module": "library_management",
  "name": "Appointment",

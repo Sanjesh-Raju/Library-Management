@@ -242,3 +242,31 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+doctype_js = {
+    "Form Api": "public/js/form_api_list.js"
+}
+
+
+# scheduler_events = {
+#     "hourly": [
+#         "library_management.doctype.utilities_api.utilities_api.show_test_message"
+#     ]
+# }
+
+page_js = {
+    "live-chart": "public/js/live_chart.js",
+    "bitcoin-chart": "public/js/bitcoin_chart.js"
+
+}
+
+app_include_templates = ["templates/includes/live_chart.html"]
+
+
+
+# scheduler_events = {
+#     "cron": {
+#         "* * * * *": [
+#             "library_management.library_management.doctype.sensor_data.sensor_data.create_sensor_record"
+#         ]
+#     }
+# }

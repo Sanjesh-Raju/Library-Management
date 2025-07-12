@@ -1,8 +1,8 @@
 // Copyright (c) 2025, sanjesh and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Appointment", {
-	// setup: function(frm) {
+frappe.ui.form.on("Appointment Child", {
+    // setup: function(frm) {
     //     frappe.msgprint("Setup: Triggered once when form is created for the first time");
     // },
 
@@ -56,24 +56,24 @@ frappe.ui.form.on("Appointment", {
     //     frappe.msgprint("After Cancel: After form is cancelled");
     // },
 
-//     timeline_refresh: function(frm) {
-//     if (frm.doc.status === "Urgent") {
-//         frm.timeline.add_comment(' Urgent appointment. Please review immediately.');
-//     }
+    //     timeline_refresh: function(frm) {
+    //     if (frm.doc.status === "Urgent") {
+    //         frm.timeline.add_comment(' Urgent appointment. Please review immediately.');
+    //     }
 
-//     if (frm.doc.priority === "High") {
-//         frm.timeline.add_comment('This is a high-priority appointment.');
-//     }
+    //     if (frm.doc.priority === "High") {
+    //         frm.timeline.add_comment('This is a high-priority appointment.');
+    //     }
 
-//     if (frm.doc.status === "Cancelled") {
-//         frm.timeline.add_comment('This appointment was cancelled.');
-//     }
-// },
+    //     if (frm.doc.status === "Cancelled") {
+    //         frm.timeline.add_comment('This appointment was cancelled.');
+    //     }
+    // },
 
 
-    timeline_refresh: function(frm) {
-        frappe.msgprint("Timeline Refresh: After form timeline is rendered");
-    },
+    // timeline_refresh: function(frm) {
+    //     frappe.msgprint("Timeline Refresh: After form timeline is rendered");
+    // },
 
     // // Field-specific change event
     // doctor: function(frm) {
@@ -81,38 +81,27 @@ frappe.ui.form.on("Appointment", {
     // },
 
 
-    // items_on_form_rendered: function(frm, grid_row) {
-    //     frappe.msgprint("Row form rendered for items table:", grid_row.doc);
-    // }
+    // child_table_on_form_rendered() {
+    //     frappe.msgprint("Editing row for item:");
+    //     },
 
-// onload(frm) {
-//         if (!frm.doc.a) frm.set_value('a', 10);
-//         if (!frm.doc.b) frm.set_value('b', 12);
-//         if (!frm.doc.c) frm.set_value('c', 3);
-//     },
+    child_table_add: (frm, cdt, cdn) => {
+        let row = locals[cdt][cdn]
+        frappe.msgprint("New Row Added")
+        row.name1 = "Brit"
+        row.age = 23
+        frm.refresh_fields('child_table')
+    },
 
-//     i(frm) {
-//         if (frm.doc.i === "a") {
-//             frm.set_value('d', frm.doc.a);
-//         }
-//     },
+child_table_remove: function(frm, cdt, cdn) {
+        frappe.msgprint("Row removed from child table.");
+    },
 
-//     a(frm) {
-//         update_e(frm);
-//     },
+    child_table_move: function(frm, cdt, cdn) {
+        frappe.msgprint("A row was moved in the child table.");
+    },
 
-//     d(frm) {
-//         update_e(frm);
-//     },
-//     s(frm) {
-//         update_e(frm);
-//     }
+
+
 });
-
-// function update_e(frm) {
-//     const a = frm.doc.s ;
-//     const d = frm.doc.d;
-//     const result = a * d;
-//     frm.set_value('e', result);
-// }
 

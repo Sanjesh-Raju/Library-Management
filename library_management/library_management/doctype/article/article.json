@@ -9,10 +9,12 @@
   "article_name",
   "image",
   "author",
+  "start_date",
   "column_break_ucdb",
   "isbn",
   "status",
   "publisher",
+  "end_date",
   "section_break_sieu",
   "product__details",
   "description",
@@ -89,6 +91,16 @@
    "fieldtype": "Table",
    "label": "product  details",
    "options": "product detail"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "end date"
   }
  ],
  "grid_page_length": 50,
@@ -97,7 +109,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2025-06-30 16:57:15.018306",
+ "modified": "2025-07-12 11:39:55.705819",
  "modified_by": "Administrator",
  "module": "library_management",
  "name": "Article",

@@ -13,4 +13,3 @@ frappe.ui.form.on('Article', {
         }
     }
 });
-
