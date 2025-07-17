@@ -1,0 +1,75 @@
+<h3>frappe.format_date</h3>
+{{ frappe.format_date('2019-09-08') }}
+
+<h3>frappe.format</h3>
+{{ frappe.format('2019-09-08', {'fieldtype': 'Date'}) }}
+
+<h3>get_url</h3>
+{{ frappe.get_url() }}
+
+<h3>get_doc</h3>
+{% set doc = frappe.get_doc('Document API', 'TK001') %}
+{{ doc.title }} - {{ doc.status }}
+
+<h3>get_all</h3>
+{% set tasks = frappe.get_all('Document API', filters={'status': 'Open'}, fields=['title']) %}
+{% for task in tasks %}
+{{ task.title }}
+{% endfor %}
+
+<h3>db.get_value</h3>
+{% set title, status = frappe.db.get_value('Document API', 'TK002', ['title', 'status']) %}
+{{ title }}
+{{ status }}
+
+<h3>db.get_value</h3>
+{% set timezone = frappe.db.get_single_value('System Settings', 'time_zone') %}
+{{ timezone }}
+
+<h3>get_system_settings(fieldname)</h3>
+{% if frappe.get_system_settings('country') == 'India' %}
+Pay via Razorpay
+{% else %}
+Pay via PayPal
+{% endif %}
+
+<h3>get_meta</h3>
+{% set meta = frappe.get_meta('Document API') %}
+Task has {{ meta.fields | len }} fields.
+{% if meta.get_field('status') %}
+It also has a Status field.
+{% endif %}
+
+<h3>frappe.get_fullname() or frappe.get_fullname(user_email)</h3>
+The fullname of san@gmail.com is {{ frappe.get_fullname('san@gmail.com') }}
+The current logged in user is {{ frappe.get_fullname() }}
+
+<h3>render_template</h3>
+{{ frappe.render_template('templates/includes/live_chart.html') }}
+
+<h3>translate</h3>
+{{ _('This string should get translated') }}
+
+<h3>frappe.session.user</h3>
+{% if frappe.session and frappe.session.user %}
+  Logged in as: {{ frappe.session.user }}
+{% else %}
+  Not logged in
+{% endif %}
+
+<h3>frappe.session.csrf_token </h3>
+csrf_token:{{frappe.session.csrf_token }}
+
+<h3>frappe.lang </h3>
+{{frappe.lang }}
+
+
+
+
+
+
+
+
+
+
+

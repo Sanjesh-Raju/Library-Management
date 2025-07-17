@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-14 11:13:19.940998",
+ "creation": "2025-07-16 17:37:52.648511",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -17,10 +17,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-14 15:16:14.277221",
+ "modified": "2025-07-16 17:47:56.473376",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Realtime",
+ "name": "Utility Functions",
  "owner": "Administrator",
  "permissions": [
   {

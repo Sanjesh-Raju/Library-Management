@@ -1,50 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{EMP}-{###}",
- "creation": "2025-07-12 19:15:23.537272",
+ "autoname": "TK.###",
+ "creation": "2025-07-14 15:27:36.094367",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "employee_name",
-  "employee_id",
-  "department",
-  "email",
-  "date_of_joining",
+  "title",
   "status",
   "document"
  ],
  "fields": [
   {
-   "fieldname": "employee_name",
-   "fieldtype": "Data",
-   "label": "Employee Name"
-  },
-  {
-   "fieldname": "employee_id",
-   "fieldtype": "Data",
-   "label": "Employee ID"
-  },
-  {
-   "fieldname": "department",
-   "fieldtype": "Data",
-   "label": "Department"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "date_of_joining",
-   "fieldtype": "Date",
-   "label": "Date of Joining"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nActive\nInactive"
+   "options": "\nOpen\nCancelled"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
   },
   {
    "fieldname": "document",
@@ -56,11 +32,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-15 15:16:41.000197",
+ "modified": "2025-07-15 13:55:13.110192",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Employee",
- "naming_rule": "Expression",
+ "name": "Document API",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

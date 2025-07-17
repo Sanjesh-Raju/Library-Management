@@ -1,26 +1,47 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-14 11:13:19.940998",
+ "autoname": "DB.###",
+ "creation": "2025-07-15 19:13:52.104646",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "status",
+  "subject",
+  "date"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClose"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-14 15:16:14.277221",
+ "modified": "2025-07-16 11:19:42.280060",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Realtime",
+ "name": "Database API",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

@@ -270,3 +270,8 @@ app_include_templates = ["templates/includes/live_chart.html"]
 #         ]
 #     }
 # }
+
+
+doctype_list_js = {
+    "Database API": "public/js/database_api_list.js"
+}
