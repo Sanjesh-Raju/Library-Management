@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Page Not Found</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 480px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .container h1 {
+      font-size: 8rem;
+      margin: 0;
+      color: #ff6b6b;
+      font-weight: 700;
+      letter-spacing: 8px;
+    }
+
+    .container h2 {
+      font-size: 2rem;
+      margin: 0.5rem 0 1.5rem;
+      font-weight: 700;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .btn-home {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .btn-home:hover {
+      background: #e55a5a;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container h1 {
+        font-size: 6rem;
+      }
+      .container h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="error-title">
+    <h1 id="error-title">404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>Sorry, the page you are looking for does not exist or has been moved.</p>
+    <a href="/" class="btn-home" aria-label="Go back to homepage">Go to Homepage</a>
+  </div>
+</body>
+</html>

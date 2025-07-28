@@ -1,50 +1,52 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-05 18:18:05.914729",
+ "creation": "2025-07-24 12:32:25.181694",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "unique",
-  "full_name",
-  "phone",
-  "amended_from"
+  "title",
+  "description",
+  "status",
+  "priority",
+  "due_date"
  ],
  "fields": [
   {
-   "fieldname": "unique",
+   "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Unique"
+   "label": "Title"
   },
   {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   },
   {
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nIn Progress\nClosed"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Sample1",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nHigh\nLow"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-07-17 20:13:56.031653",
+ "modified": "2025-07-24 12:40:21.731241",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Sample1",
+ "name": "List View",
  "owner": "Administrator",
  "permissions": [
   {

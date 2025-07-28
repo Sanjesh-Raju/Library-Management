@@ -22,9 +22,9 @@ frappe.ui.form.on("Utilities API", {
             frappe.set_route('Form', 'article','Harry Potters');
         
         });
+        
         frm.add_custom_button('Go to Tasksss ', () => {
             frappe.set_route('List/article/calender');
-        
         });
     
 //---------------->frappe.format 

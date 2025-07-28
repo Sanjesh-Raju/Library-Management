@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2025-07-22 17:21:03.029845",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNTM1LWJvb2stMDJhXzEucG5n.png",
+ "idx": 0,
+ "modified": "2025-07-22 17:21:03.029845",
+ "modified_by": "Administrator",
+ "module": "library_management",
+ "name": "book",
+ "owner": "Administrator",
+ "page_name": "book",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Book"
+}

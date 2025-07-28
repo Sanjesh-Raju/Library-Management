@@ -4,7 +4,8 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils import *
-
+from frappe.utils.pdf import get_pdf
+from datetime import datetime          
 
 class UtilityFunctions(Document):
     def before_save(self):
@@ -81,24 +82,38 @@ class UtilityFunctions(Document):
         # d=validate_phone_number('87345%%', throw=True)
         # frappe.msgprint(f"validate_phone_number:{(a,b,c)}")
         
-        cache = frappe.cache()
-        cache.set('name', 'frappe') 
-        cache.get('name')
-        frappe.msgprint(f"cache:{cache}")
+        # cache = frappe.cache()
+        # cache.set('name', 'frappe') 
+        # cache.get('name')
+        # frappe.msgprint(f"cache:{cache}")
+        pass
+        
 
 
+@frappe.whitelist(allow_guest=True)
 
+def utl():
+    booking = {
+        'Bajaj': 'RS200',
+        'KTM': 'RC200',
+        'Ninja': 'H2r',
+        'Yamaha': 'R15',
+        'Honda': 'CBR150'
+    }
 
+    html = '<h1>Welcome to Sundar Bikes</h1><ol>'
+    for company, bike in booking.items():
+        html += f'<li>{company} - {bike}</li>'
+    html += '</ol>'
 
+    pdf = get_pdf(html)
+    timestamp = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
+    file_doc = frappe.get_doc({
+        "doctype": "File",
+        "file_name": f"invoice_{timestamp}.pdf",
+        "content": pdf,
+        "is_private": 0
+    }).insert(ignore_permissions=True)
 
-
-
-
-
-
-
-
-
-  
-
+    return file_doc.file_url    

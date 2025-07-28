@@ -1,50 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-05 18:18:05.914729",
+ "creation": "2025-07-28 11:30:07.724948",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "unique",
-  "full_name",
-  "phone",
-  "amended_from"
+  "name1"
  ],
  "fields": [
   {
-   "fieldname": "unique",
+   "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Unique"
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Sample1",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "label": "Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-07-17 20:13:56.031653",
+ "modified": "2025-07-28 11:30:30.951420",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Sample1",
+ "name": "Query Builder",
  "owner": "Administrator",
  "permissions": [
   {

@@ -48,7 +48,7 @@ class DatabaseAPI(Document):
         # frappe.msgprint(f"get_all: {records}")
 
 #------------------------get_value
-    # Get single value
+        # Get single value
         # subject = frappe.db.get_value('Database API', 'DB002', 'subject')
         # frappe.msgprint(f"Single subject: {subject}")
 
@@ -66,7 +66,39 @@ class DatabaseAPI(Document):
         #timezone = frappe.db.get_single_value('System Settings', 'timezone')
         # frappe.msgprint(f" single doctype {timezone}")
 
-#------------------------get_value
-        frappe.db.set_value('Database API', 'DB002', 'subject', 'Updated Subject')
+#------------------------set_value
+        # frappe.db.set_value('Database API', 'DB002', 'subject', 'Updated Subject',update_modified=False)
         
+#------------------------exists
+
+        # doc = frappe.db.exists("Database API", {"name1": "san"})
+        # if doc:
+        #         frappe.msgprint(f"Already exists: {doc}")
         
+#------------------------count
+
+        # doc=frappe.db.count('Database API', {'status': 'Open'})
+        # frappe.msgprint(f"no.of.record:{doc}")
+        
+#------------------------delete
+
+        # doc=frappe.db.delete('Database API', {'status': 'Open'})
+        # frappe.msgprint(f"The record delete")
+        
+#------------------------truncate
+
+        # frappe.db.truncate("Database API")
+        # frappe.msgprint(f"all record the delete")
+        
+        # frappe.db.set_value('Database API', 'DB007', 'status', 'Open')
+        # frappe.db.commit() 
+        
+        # result = frappe.db.sql("SELECT name, status FROM `tabTask` WHERE status=%s", ("Open",))
+        # for row in result:
+        #         frappe.msgprint(row[0], row[1])
+        
+        frappe.db.add_unique("Database API", "name1")
+
+
+
+

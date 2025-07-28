@@ -1,0 +1,9 @@
+/* public/css/custom_todo.css */
+.web-form .page-title {
+    color: #007bff;
+    font-weight: bold;
+}
+
+input {
+    border: 2px solid #007bff !important;
+}

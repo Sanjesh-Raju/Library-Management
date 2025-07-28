@@ -1,50 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-05 18:18:05.914729",
+ "creation": "2025-07-22 18:57:44.195080",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "unique",
-  "full_name",
-  "phone",
-  "amended_from"
+  "user_id",
+  "password",
+  "phone"
  ],
  "fields": [
   {
-   "fieldname": "unique",
+   "fieldname": "user_id",
    "fieldtype": "Data",
-   "label": "Unique"
+   "in_list_view": 1,
+   "label": "user_id",
+   "reqd": 1
   },
   {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "password"
   },
   {
    "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Sample1",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "fieldtype": "Data",
+   "label": "phone",
+   "options": "Phone"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-07-17 20:13:56.031653",
+ "modified": "2025-07-23 19:32:40.105255",
  "modified_by": "Administrator",
  "module": "library_management",
- "name": "Sample1",
+ "name": "Scanner API",
  "owner": "Administrator",
  "permissions": [
   {

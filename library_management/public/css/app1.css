@@ -1,0 +1,9 @@
+.navbar {
+    background-color: #5dbee8 !important;
+    color: #000 !important;               
+}
+
+.navbar * {
+    color: #000 !important;              
+    font-weight: bold;
+}

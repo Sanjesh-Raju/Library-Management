@@ -17,6 +17,17 @@ frappe.ui.form.on('Sample2', {
                 }
             });
         }
+    },
+    refresh(frm) {
+        frm.set_query('unique', () => {
+    return {
+        filters: {
+            docstatus: 1
+        }
     }
+})
+
+	},
 });
+
 

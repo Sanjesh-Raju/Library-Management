@@ -275,3 +275,148 @@ app_include_templates = ["templates/includes/live_chart.html"]
 doctype_list_js = {
     "Database API": "public/js/database_api_list.js"
 }
+
+
+# my_app/hooks.py
+
+website_context = {
+    "brand_html": '<img src="https://www.logoground.com/uploads12/dv12y20232395842023-04-063833463panda.jpg" alt="Logo" style="height:40px; vertical-align:middle; margin-right:10px;"><b>My Brand</b>',
+
+    "top_bar_items": [
+        {"label": "Home", "url": "/"},
+        {"label": "Contact", "url": "/contact"}
+    ],
+    "favicon": "/assets/my_app/images/favicon.png",
+    "splash_image": "/assets/my_app/images/splash.png"
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# app_include_js = "/assets/library_management/js/main.js"
+app_include_css = "/assets/library_management/css/app1.css"
+
+
+website_context = {
+    "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lsq0SpUwbknMZo9ZiGP4zv_95ynllj857w&s",
+    "brand_html":'<div><img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNTM1LWJvb2stMDJhXzEucG5n.png.png"/>Library</div>',
+
+    # "top_bar_items": [
+    #     {"label": "Home", "url": "/", "target": "_self"},
+    #     {"label": "Members", "url": "/library-member", "target": "_self"},
+    #     {"label": "Books", "url": "/book", "target": "_self"},
+    #     {"label": "Contact", "url": "/contact", "target": "_self"},
+    # ],
+    "footer_items": [
+        {"label": "Privacy", "url": "/privacy"},
+        {"label": "Terms", "url": "/terms"},
+    ],
+}
+
+# website_context = {
+#     "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lsq0SpUwbknMZo9ZiGP4zv_95ynllj857w&s",
+#     "slogan": "Library for all readers",
+#     "brand_html": "📚 Frappe Library",
+#     "navbar_items": [
+#         {"label": "Home", "url": "/", "target": "_self"},
+#         {"label": "Members", "url": "/library-member", "target": "_self"},
+#         {"label": "Books", "url": "/book", "target": "_self"},
+#         {"label": "Contact", "url": "/contact", "target": "_self"},
+#     ],
+#     "footer_items": [
+#         {"label": "Privacy", "url": "/privacy"},
+#         {"label": "Terms", "url": "/terms"},
+#     ],
+#     "hero_title": "Welcome to the Gold Library ✨",
+#     "hero_subtitle": "Explore our collection of rare and modern books",
+#     "custom_css": "/assets/your_app/css/website.css",
+#     "custom_js": "/assets/your_app/js/website.js"
+# }
+
+
+
+
+# your_app/hooks.py
+
+website_redirects = [
+    # {"source": "/app/users/", "target": "https://chatgpt.com/"},
+    # {"source": "/app/private/library-management", "target": "/app/doctype/view/list"},
+#     # {"source": "/app(/.*)?", "target": "https://docs.frappe.io/framework/user/en/api/form"},
+#     # {"source": r'/items/item\?item_name=(.*)', "target": '/items/\1', "match_with_query_string": True},
+#     {
+#     # "source": r'/app/private/library-management\?id=(.*)',
+#     # "target": '/app/library-membership/\\1',
+#     # "match_with_query_string": True
+# }
+
+]
+
+website_route_rules = [
+    {
+        "from_route": "/library-membership/<name>",
+        "to_route": "app/library-membership/LMS00005"
+    }
+]
+
+# web_include_js = "/assets/library_management/js/web.js"
+# web_include_css = "/assets/library_management/css/web1.css"
+
+webform_include_js = {
+    "Article": "public/js/page.js"
+}
+
+webform_include_css = {
+    "Article": "public/css/page1.css"
+}
+
+# hooks.py in your custom app
+
+# page_js = {
+#     "live-chart": "public/js/custom_page.js"
+# }
+
+
+
+# before_migrate = "library_management.library_management.migrate.before_migrate"
+# after_migrate = "library_management.library_management.migrate.after_migrate"
+
+
+# home_page = "homepage"
+
+
+# role_home_page = {
+#     "Accounts Manager": "Jinja_API"
+
+# }
+
+# get_website_user_home_page = "library_management.library_management.page.get_home_page"
+
+
+portal_menu_items = [
+    {"title": "Book", "route": "/homepage", "role": "Accounts Manager"},
+    {"title": "Post Book", "route": "/new-article/", "role": "Customer"},
+]
+
+standard_portal_menu_items = [
+    {"title": "Book", "route": "/article", "role": "Accounts Manager"},
+    {"title": "Post Book", "route": "/new-article/", "role": "Customer"},
+]
+
+
+
+override_email_send = "library_management.library_management.overrides.email.send"
+get_sender_details = "library_management.library_management.overrides.email.get_sender_details"
+
+
+
+
+
+
+
+before_write_file = "library_management.library_management.overrides.file.before_write"
+
+
+
+extend_website_page_controller_context = {
+    "frappe.www.404": "library_management.library_management.error_page.context_404"
+}

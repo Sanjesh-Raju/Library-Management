@@ -1,0 +1,26 @@
+/* Style the top navbar in Doctype view */
+body[data-page-route^="Form"] .page-head {
+    background-color: #FFD700 !important;  /* Gold background */
+    color: #000 !important;                /* Black text */
+    font-weight: bold;
+    border-bottom: 2px solid #b8860b;      /* Optional gold border */
+}
+
+/* Style the title and buttons */
+body[data-page-route^="Form"] .page-title {
+    color: black !important;
+}
+
+body[data-page-route^="Form"] .btn {
+    background-color: #fff8dc !important;  /* Light gold buttons */
+    color: #000 !important;
+    border: 1px solid #b8860b;
+}
+
+/* Optional: style Save/Print/Submit buttons specifically */
+body[data-page-route^="Form"] .btn-primary {
+    background-color: #f0c420 !important;  /* Bright gold */
+    border-color: #d4af37;
+    color: #000;
+    font-weight: bold;
+}
