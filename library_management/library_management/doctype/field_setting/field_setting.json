@@ -7,7 +7,7 @@
  "field_order": [
   "name1",
   "age",
-  "gender"
+  "food"
  ],
  "fields": [
   {
@@ -27,14 +27,14 @@
    "placeholder": "eg.18.."
   },
   {
-   "default": "Male",
-   "description": "Choose the Gender",
+   "default": "veg rice",
+   "description": "Choose the Food",
    "documentation_url": "https://chatgpt.com/",
-   "fieldname": "gender",
+   "fieldname": "food",
    "fieldtype": "Select",
-   "label": "Gender",
+   "label": "Food",
    "mandatory_depends_on": "name1",
-   "options": "\nMale\nFemale",
+   "options": "\nveg rice\nchicken rice",
    "placeholder": "select",
    "sort_options": 1
   }
@@ -42,7 +42,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-25 12:06:21.396817",
+ "modified": "2025-08-02 12:13:59.991798",
  "modified_by": "Administrator",
  "module": "library_management",
  "name": "Field Setting",

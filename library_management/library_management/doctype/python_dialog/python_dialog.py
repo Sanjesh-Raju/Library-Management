@@ -57,36 +57,36 @@ class PythonDialog(Document):
 
 
     def before_save(self):
-        # 1️⃣ Basic message
+        # Basic message
         # frappe.throw("This is a basic error message.")
 
-        # 2️⃣ Custom exception class
+        # Custom exception class
         # frappe.throw(
         #     msg="This is a validation error.",
         #     exc=frappe.ValidationError
         # )
 
-        # # 3️⃣ Custom title
+        # # Custom title
         # frappe.throw(
         #     msg="You are not allowed to do this.",
         #     title="Permission Denied"
         # )
 
-        # 4️⃣ Minimize the message box
+        # Minimize the message box
         frappe.throw(
             msg="This message can be minimized.",
             title="Minimizable Error",
             is_minimizable=True
         )
 
-        # # 5️⃣ Wide message box
+        # #  Wide message box
         # frappe.throw(
         #     msg="This message box is wider than usual.",
         #     title="Wide Error",
         #     wide=True
         # )
 
-        # # 6️⃣ Message as a list
+        # # Message as a list
         # frappe.throw(
         #     msg=[
         #         "Field A is required.",
@@ -97,7 +97,7 @@ class PythonDialog(Document):
         #     as_list=True
         # )
 
-        # # 7️⃣ Primary action (with a global client-side JavaScript function)
+        # #  Primary action (with a global client-side JavaScript function)
         # frappe.throw(
         #     msg="An error occurred during backup.",
         #     title="Backup Error",

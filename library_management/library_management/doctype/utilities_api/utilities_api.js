@@ -44,3 +44,8 @@ frm.add_custom_button('frappe provide', () => {
 
     }
 });
+
+//---------------->frappe.require
+
+frappe.require('/assets/library_management/js/web.js', () => {
+})

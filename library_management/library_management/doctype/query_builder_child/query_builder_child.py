@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class FieldTypes(Document):
+class QueryBuilderChild(Document):
 	pass

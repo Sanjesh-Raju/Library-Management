@@ -1,26 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "QB-.###",
  "creation": "2025-07-28 11:30:07.724948",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "items",
+  "status"
  ],
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "items",
+   "options": "Query Builder Child"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nopen\nclosed"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-28 11:30:30.951420",
+ "modified": "2025-07-30 18:01:30.008586",
  "modified_by": "Administrator",
  "module": "library_management",
  "name": "Query Builder",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

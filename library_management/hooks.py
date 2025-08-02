@@ -259,7 +259,7 @@ page_js = {
 
 }
 
-app_include_templates = ["templates/includes/live_chart.html"]
+# app_include_templates = ["templates/includes/live_chart.html"]
 
 
 
@@ -420,3 +420,20 @@ before_write_file = "library_management.library_management.overrides.file.before
 extend_website_page_controller_context = {
     "frappe.www.404": "library_management.library_management.error_page.context_404"
 }
+
+
+
+
+
+
+doc_events = {
+    "ToDo": {
+        "after_insert": "library_management.library_management.enqueue.enqueue_notify"
+    }
+}
+
+
+
+app_include_js = [
+    "https://checkout.razorpay.com/v1/field_setting.js"
+]

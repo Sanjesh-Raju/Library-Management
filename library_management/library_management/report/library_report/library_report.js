@@ -36,5 +36,19 @@ frappe.query_reports["Library Report"] = {
 				'fieldtype':'Date',
 				'label':__('Membership To Date')
 			}
-	]
+	],
+	formatter: function(value, row, column, data, default_formatter) {
+        value = default_formatter(value, row, column, data);
+        if (column.fieldname === "type") {
+            if (value === "Return") {
+                return `<span style="color:green; font-weight:bold;">${value}</span>`;
+            } else if (value === "Issue") {
+                return `<span style="color:red;">${value}</span>`;
+            }
+        }
+        return value;
+    }
 };
+
+
+

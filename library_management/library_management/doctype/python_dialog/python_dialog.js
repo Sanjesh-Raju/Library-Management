@@ -4,12 +4,12 @@
 frappe.ui.form.on("Python Dialog", {
 	refresh(frm) {
 
-//         frappe.msgprint({
-//   message: "Here is your detailed audit log...",
-//   title: "Audit Info",
-//   is_minimizable: true,
-//   wide: true
-// });
+        frappe.msgprint({
+  message: "Here is your detailed audit log...",
+  title: "Audit Info",
+  is_minimizable: true,
+  wide: true
+});
 
 fetch('http://localhost:8001/api/method/frappe.auth.get_logged_user', {
   headers: {

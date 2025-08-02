@@ -1,5 +1,6 @@
 // Copyright (c) 2025, sanjesh and contributors
 // For license information, please see license.txt
+
 frappe.ui.form.on('Sample2', {
     before_submit: function(frm) {
         if (frm.doc.unique) {
@@ -16,13 +17,15 @@ frappe.ui.form.on('Sample2', {
                     }
                 }
             });
+            
+            
         }
     },
     refresh(frm) {
         frm.set_query('unique', () => {
     return {
         filters: {
-            docstatus: 1
+            docstatus: 2
         }
     }
 })

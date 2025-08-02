@@ -219,6 +219,16 @@ frappe.ui.form.on("Form Api", {
  
  
 // });
+let my_field = frappe.ui.form.make_control({
+    df: {
+        label: "Customer Name",
+        fieldname: "customer_name",
+        fieldtype: "Data",
+        reqd: 1
+    },
+    parent: wrapper,  // HTML element to attach this field to
+    render_input: true
+});
 
 	},
 });
