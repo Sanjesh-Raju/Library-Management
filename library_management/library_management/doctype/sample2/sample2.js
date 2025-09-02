@@ -17,8 +17,6 @@ frappe.ui.form.on('Sample2', {
                     }
                 }
             });
-            
-            
         }
     },
     refresh(frm) {
